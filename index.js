@@ -23,7 +23,8 @@ app.post("/generate", (req, res) => {
 
         let urls = body.body.split("https://").map(val => { return "https://" + val }).slice(1).filter(link => { return link.includes("index.m3u8") })
         let foundURL = extractUrls(urls[0]);
-        res.send({ result: foundURL, message: "none" })
+        console.log(foundURL)
+        res.send({ result: [body], message: "none" })
 
     })
 })
