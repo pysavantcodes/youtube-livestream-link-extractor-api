@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 app.use((err,req,res,next)=>{
     res.status(500);
     res.json({msg:"Error occured",data:err?.msg});
-})
+});
 
 app.post("/generate", (req, res) => {
 
