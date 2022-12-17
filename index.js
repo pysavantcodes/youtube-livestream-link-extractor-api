@@ -1,5 +1,3 @@
-const puppeteer = require("puppeteer");
-
 const extractUrls = require("extract-urls");
 const express = require('express');
 const cors = require('cors');
@@ -17,7 +15,7 @@ app.use(morgan('combined'));
 app.get('/', (req, res) => {
     res.send("Hello");
 });
-app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
+//app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 
 app.post("/generate", (req, res) => {
 
